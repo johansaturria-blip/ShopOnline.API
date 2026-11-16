@@ -1,0 +1,26 @@
+@ShopOnline.API_HostAddress = https://localhost:7051
+
+### 1. Obtener todos los productos (GET)
+GET {{ShopOnline.API_HostAddress}}/api/products
+Accept: application/json
+
+###
+
+### 2. Filtrar productos por categoría (GET)
+GET {{ShopOnline.API_HostAddress}}/api/products/category/1
+Accept: application/json
+
+###
+
+### 3. Crear un nuevo producto (POST)
+POST {{ShopOnline.API_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  "name": "Auriculares Inalámbricos",
+  "description": "Sonido de alta definición con cancelación de ruido",
+  "price": 89.99,
+  "stock": 25,
+  "imageUrl": "https://via.placeholder.com/150",
+  "categoryId": 1
+}
